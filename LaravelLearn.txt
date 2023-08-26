@@ -4,3 +4,15 @@ Web.php is where we load in views and controllers
 For creating api's the api.php would be used 
 
 extensions for laravel development (laravel blade snippets, php name resolver)
+
+Usually data goes through a model in laravel there's a orm called eloquent which means object relational mapper
+it basically maps data to objects. We get data from a database and then we just cast it into an object which then 
+we can manipulate in whichever way we want
+
+Migration is something that autogenerates code for controlling database tables. So basically when it's ran it creates tables
+you create migrations by running command php artisan make:migration create_name_table and it will create a migration which then you edit
+then run php artisan migrate to create tables and such
+
+you can SEED your database by running php artisan db:seed. you will create fake records. 
+If you want to refresh the whole db you can do that by running php migrate:refresh
+or php migrate:refresh --seed to then also seeed db

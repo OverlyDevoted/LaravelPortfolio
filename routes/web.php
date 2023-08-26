@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Listing;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,17 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('records', [
         'heading' => 'Latest portfolio',
-        'listings' => [
-            [
-                'id'=>1,
-                'title'=>'Portfolio one',
-                'description'=>'A portfolio item'
-            ],
-            [
-                'id'=>2,
-                'title'=>'Portfolio two',
-                'description'=>'A portfolio item that is much more than portfolio item 1'
-            ]
-        ]
+        'listings' => Listing::all()
+    ]);
+});
+Route::get('/listing/{id}', function ($id) {
+    return view('record', [
+        'heading' => 'Portfolio item showcase',
+        'listing' => Listing::find($id)
     ]);
 });
