@@ -1,0 +1,6 @@
+Resources folder of the project contains the views for the project
+
+Web.php is where we load in views and controllers
+For creating api's the api.php would be used 
+
+extensions for laravel development (laravel blade snippets, php name resolver)
