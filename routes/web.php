@@ -20,9 +20,9 @@ Route::get('/', function () {
         'listings' => Listing::all()
     ]);
 });
-Route::get('/listing/{id}', function ($id) {
+Route::get('/listing/{listing}', function (Listing $listing) {
     return view('record', [
-        'heading' => 'Portfolio item showcase',
-        'listing' => Listing::find($id)
+        'heading' => 'Portfolio entry',
+        'listing' => $listing
     ]);
 });

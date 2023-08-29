@@ -1,3 +1,4 @@
+
 Resources folder of the project contains the views for the project
 
 Web.php is where we load in views and controllers
@@ -15,4 +16,10 @@ then run php artisan migrate to create tables and such
 
 you can SEED your database by running php artisan db:seed. you will create fake records. 
 If you want to refresh the whole db you can do that by running php migrate:refresh
-or php migrate:refresh --seed to then also seeed db
+or php artisan migrate:refresh --seed to then also seeed db
+
+you can create models by running php artisan make:model Name
+
+
+You can make factories that basically are used when seeding the database it helps to craete placeholder records for testing
+php artisan make:factory ListingFactory

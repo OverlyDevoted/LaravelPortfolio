@@ -18,7 +18,6 @@ return new class extends Migration
             $table->longText('description');
             $table->string('link');
             $table->string('username');
-
             $table->timestamps();
         });
     }
