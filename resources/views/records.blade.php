@@ -8,16 +8,9 @@
             <p>No listings found</p>
         @else
             @foreach ($listings as $listing)
-                <div class="flex max-h-40 bg-gray-100 border-2 border-gray-200">
-                    <div class="flex p-2 text-ellipsis overflow-hidden">
-                        <img class="w-24 mr-2 object-contain" src={{ asset('images/logo_light.png') }} alt="Entry image">
-                        <div class="">
-                            <a class="text-blue-400 underline text-lg"
-                                href="/listing/{{ $listing['id'] }}">{{ $listing['title'] }}</a>
-                            <p>{{ $listing['description'] }}</p>
-                        </div>
-                    </div>
-                </div>
+                <x-card class="max-h-40 overflow-hidden">
+                    <x-listing-card :listing="$listing" />
+                </x-card>
             @endforeach
         @endif
     </div>
